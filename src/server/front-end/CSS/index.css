@@ -1,0 +1,123 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+form{
+    position: relative;
+    display: grid;
+    align-items: center;
+    background-color: grey;
+    border-radius: 1em;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.create{
+    grid-template-areas: "FormLabel" "label""feild" ".";
+    grid-template-rows: 2fr .25fr .75fr 2fr;
+}
+
+.join{
+    grid-template-areas:"formLabel" "label1""feild1"  "label2" "feild2" ".";
+    grid-template-rows: 2fr .25fr .75fr .25fr .75fr 2fr;
+}
+
+input[type=submit]{
+    position: absolute;
+    bottom:0;
+    right:0;
+    border-radius: .5em;
+    font-size: large;
+    padding: 0.5em;
+    padding-top: .25em;
+    cursor: pointer;
+    /* transform: translate(-50%, -50%) */
+}
+#joinName{
+    grid-area: feild1;
+}
+
+#joinID{
+    grid-area: feild2;
+}
+#createName{
+    grid-area: feild;
+}
+
+input{
+    margin: 1em;
+}
+
+form input[type=text]{
+    height:2em;
+    max-width: 80%;
+    color:white;
+    background-color: rgb(80, 80, 80);
+    box-shadow: none;
+    border: 1px solid white;
+    display: block;
+    border-radius: 1em;
+    margin:auto;
+    transition: transform 100ms ease-in-out;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+form input[type=text]:hover, form input[type=text]:focus-within{
+    transform: scale(1.25,1.25);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+    transition: transform 100ms ease-in-out,  box-shadow 100ms ease-in-out;
+
+}
+
+form input[type=text]:focus-within{
+    outline:none;
+}
+
+.formsContainer{
+    gap:2em;
+    margin:auto;
+    height: 60vh;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    background-color: lightgrey;
+}
+
+.lobbyIDOutput{
+    position: relative;
+    margin: auto;
+    margin-top: 2em;
+    width: calc(80vw + 2em);
+    height: 20vh;
+    background: grey;
+
+    display:flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: lime;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.lobbyIDOutput p {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 1em;
+    color: black;
+}
+.hidden{
+    display: none;
+}
+body{
+    background-color: lightgrey;
+}
+p{
+    font-size: large;
+    font-weight: bold;
+    margin:auto
+}
+

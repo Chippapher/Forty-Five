@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <title>45's</title>
+</head>
+<body>
+
+    <div class="formsContainer">
+        <form id="creationForm" class="create" action="./createGame" method="POST" autocomplete="off">
+            <p>Create a new game</p>
+            <p>Display Name</p>
+        <input type="text" name="name" id="createName" required>
+        <!-- we'll do the auth thing later -->
+        <!-- <input type="text" name="password" id="createPassword">-->
+        <input type="submit" value="Create">
+        
+        </form>
+        
+        <form id="joiningForm" class="join" action="./joinGame" method="POST" autocomplete="off" >
+            <p>Join a Game</p>
+            <p>Display Name</p>
+            <input type="text" name="name" id="joinName" autocomplete="off" required>
+
+            <p>Lobby ID</p>
+            <input type="text" name="lobbyID" id="joinID" autocomplete="off" required>
+            <!-- <input type="text" name="password" id="joinPassword"> -->
+            <input type="submit" value="Join">
+        
+        </form>
+
+       
+    </div> 
+    <div id="lobbyIDOutput" class="lobbyIDOutput hidden"></div>
+
+    <script src="/JS/index.js"></script>
+    
+</body>
+</html>

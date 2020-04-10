@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/game.css">
+    <title>45's</title>
+</head>
+<body>
+    
+
+    <div class="nav">
+        
+        <input type="range" name="Card Show Time" id="rspzTime" min="1" max="5" step=".25" value="1">
+        <label for="rspzTime" id=rspzTimeLabel></label>
+        <script>
+            document.getElementById("rspzTime").oninput= (e)=> document.getElementById("rspzTimeLabel").innerHTML = e.target.value;
+        </script>
+    </div>
+    <div class="game">
+        <div class="playzone" id= "playzone">
+        </div>
+        <div class="hand" id="hand"></div>
+        <div class="deck" id="deck">
+
+            <div class="questionBox hidden" id="questionBox">
+                <div class="questionText" id="questionText">
+                    Would you like to rob?
+                </div>
+                <div class="buttonbox">
+                    <div class="button" id="yes">Yes</div>
+                    <div class="button" id="no">No</div>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+        <div class="scoreboard" id= "scoreboard">
+            <div class="scorepanel" id="opponent">
+                <span>Opponent</span> 
+                <div class="match"> </div>
+                <div class="handPoints"></div>
+            </div>
+                
+            <div class="scorepanel" id="you">
+                <span>You</span>
+                <div class="match"></div>
+                <div class="handPoints"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/JS/game.js"></script>
+    
+</body>
+</html>

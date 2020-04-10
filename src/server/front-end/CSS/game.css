@@ -1,0 +1,177 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-height: 100%;
+    max-width: 100%;
+    padding: 3px;
+    
+}
+
+.inactive{
+    /* filter: grayscale(100%); */
+}
+.clickable{
+    cursor: pointer;
+    border: 2px solid gold;
+}
+.hidden{
+    display: none !important;
+}
+.hidden * {
+    display: none !important;
+}
+
+.game{
+    background-color:rgb(42, 99, 42);
+}
+
+.game div{
+    border-collapse: collapse;
+    padding:1em;
+    position: relative;
+}
+
+.nav{
+    height: 5vh;
+    background-color: rgba(50, 50, 50, .5);
+}
+.hand{
+    overflow: hidden;
+    grid-area: hand;
+    display: flex;
+    justify-content: center;
+}
+.playzone{
+    display: flex;
+    max-height: calc(95vh * .7);
+    align-items: center;
+    justify-content: center;
+    grid-area: playzone;
+}
+.deck{
+    grid-area: deck;
+    display: grid;
+    grid-template-rows: 70fr 30fr;
+    grid-template-areas: "card"
+     "question";
+}
+
+.deck img{
+    grid-area: card;
+}
+
+.questionBox{
+    background-color: rgb(2, 77, 2);
+    display:grid;
+    grid-template-rows: 65fr 35fr;
+    grid-template-areas: "questiontext" "buttons";
+}
+
+.questionText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    grid-area: questiontext;
+}
+
+.buttonbox{
+    padding: 0px !important;
+    display:grid;
+    grid-template-columns: 50fr 50fr;
+    grid-area: buttons;
+    grid-template-areas: "no yes";
+    column-gap: 5px;
+}
+
+.button{
+    cursor: pointer;
+    border: 1px solid black;
+    max-width: calc(100% - 10px);
+    box-sizing: content-box;
+    padding: 0px !important;
+    margin: 5px;
+    width: 100%;
+    background-color: grey;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: all;
+    transition-duration: 100ms;
+    box-shadow : 0px 0px 2px 4px rgba(0, 0, 0, .05);
+}
+.button:hover{
+    max-width: calc(100% - 0px);
+    transition-property: box-shadow;
+    transition-property: margin;
+    transition-property: all;
+    transition-duration: 100ms;
+    box-shadow: 0px 0px 4px 8px rgba(0, 0, 0, .05);
+    margin:0;
+    font-size: 1.15em;
+}
+#yes#button{
+    grid-area: yes;
+    padding: 1px;
+}
+
+
+#no#button{
+    grid-area: no;
+    padding: 1px;
+}
+
+.scoreboard{
+    grid-area: score;
+    display: grid;
+    grid-template-rows: 5fr 5fr;
+    
+}
+.scorepanel{
+    color: white;
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 2fr 4fr 4fr;
+    grid-template-areas: "title" "match" "handPoints";
+}
+.scorepanel > span{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: title;
+}
+.match{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: match;
+}
+.handPoints{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: handPoints;
+}
+
+.game{
+    position: relative;
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-rows: 7fr 3fr;
+    grid-template-areas: "score playzone deck" 
+        "score hand deck";
+}
+
+.trump{
+    grid-area: card;
+}
+
+.rob{
+    grid-area: question;
+}
